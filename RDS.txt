@@ -1,0 +1,21 @@
+RDS(Relational Database Service)
+==========================
+Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate, and scale relational databases in the cloud. It provides cost-efficient and resizable capacity while managing time-consuming database administration tasks, freeing you up to focus on your applications and business.
+
+
+It will support 6 databases.
+====================
+1) Mysql
+2) Maria
+3) Amazon aurora(mysql based, related to amazon)
+4) Oracle
+5) Mssql
+6) postgres
+
+License Model
+===========
+1) GNU ---> free and open source.
+2) BYOL ---> Bring Your Own License.
+3) License Included
+
+# mysql -h testdb.cwzstmo9t3wd.us-west-2.rds.amazonaws.com -u root -p ---> to connect sql
