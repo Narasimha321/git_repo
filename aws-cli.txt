@@ -1,0 +1,51 @@
+AWS CLI
+=======
+
+* Install PIP(Python Package Index) package.
+for redhat
+# pip isntall awscli
+
+
+
+*Configure awscli
+# aws configure
+it will ask some information like
+Access key
+Secret key
+regeion
+default script format (json): json,text and table these are the formats availaiable 
+
+we can get access and secret key from name---> security credentials---> continue to security credentials---> create new access key
+
+
+after configuration check wether it is working properly or not
+
+# aws ec2 describe-instances
+# ls -la
+.aws(in that directory credentials will be there)
+
+
+# aws ec2 ls ---> it will disply the options of ec2 in cli mode
+how to create an instance.
+====================
+# aws ec2 help ---> for help commands
+# aws ec2 run-instances --image-id (ami-id) --key-name (keyname) --instance-type t2.micro --region (region name, if u want to create in another regeion)
+
+# aws ec2 describe-instances --output table --region us-west-2a
+
+to get the information about instance
+How to terminate an Instance:
+======================
+
+# aws ec2 terminate-instances --instance-ids (instance-id)
+
+help commands
+============
+
+# aws ec2 run-instances help ( for help)
+
+# aws s3 ls ---> list out buckets availiable in s3
+
+# aws s3 help
+# aws s3 ls
+# aws s3 mb s3://bucketname
