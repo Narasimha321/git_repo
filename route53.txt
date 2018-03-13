@@ -1,0 +1,37 @@
+ROUTE53
+========
+It is nothing but same like DNS.
+
+DNS is used to named resolution. i.e; it will convert ip address to domain name and domain name to id address.
+
+top level domains(TDL)
+==================
+.in	.com	.org
+
+FQDN(Fully Qualified Domain Name)
+============================
+
+It is nothing but combination of subdoamin,domain and TDL
+
+sub domain is also known as hostname.
+eg: www.google.com 
+
+DNS s/w's
+========
+Bind
+DNSmasq	
+MicrosoftDNS
+
+Route53 Configuration:
+==================
+1) create a TDL (in godaddy or aws)
+2) create hotsed zone in aws.
+
+* click hosted zones in route53 dash board.
+* enter domain name 
+* click on create
+3) go to godaddy and under name server click on change and enter name server records from AWS(ns-818.awsdns-38.net. 
+like this, min 2 records should update)
+4) create an EC2 Instance and host http(index.html)
+5) copy public ip of ec2 instance and paste in A record( click on create record set)
+6) again click on create record set and enter www in name field, select type as CNAME ,enter domain name(vlearn.info) in value field.

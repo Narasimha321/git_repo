@@ -1,0 +1,85 @@
+S3(Simple Storage Service)
+=====================
+Q: What is Amazon S3?
+
+Amazon S3 is storage for the Internet. It’s a simple storage service that offers software developers a highly-scalable, reliable, and low-latency data storage infrastructure at very low costs.
+
+In March 2006 amazon launched S3
+
+storage types:
+===========
+
+1) block storage : one instance can mount at a time.( storage may be with in the system or it may be a LUN)
+
+2) File storage : storage can be connected to more than one instance. eg: NFS. dynamic format i.e changes will reflect in all systems at a time.
+
+3) Object storage : No instance required for this kind of storage.(url based). we cant modify existing, if we want to modify
+
+
+What is Bucket?
+
+It is nothing but collection of objects.
+
+* Buckets are globally unique containers for everything that you store in Amazon S3.
+* After you create a bucket, you can upload your objects (for example, your photo or video files)
+* By default, the permissions on an object are private, but you can set up access control    policies to grant permissions to others
+
+* we can create 100 buckets per an account.
+* but for objects in the bucket is no limit.
+* max we can upload 5TB
+
+What are objects?
+
+nothing but like files.
+
+What is folder?
+
+Folder is nohing but it will hold the objects without metadata.
+
+Q: How much data can I store?
+
+The total volume of data and number of objects you can store are unlimited. Individual Amazon S3 objects can range in size from a minimum of 0 bytes to a maximum of 5 terabytes. The largest object that can be uploaded in a single PUT is 5 gigabytes. For objects larger than 100 megabytes, customers should consider using the Multipart Upload capability.
+
+
+Storage Classes
+============
+
+1) Standard
+
+* Durability is 99.999999999
+* Availiability is 99.99
+* Cost is also high.
+* failures also very less(4 failures per 1000)
+*Concurant FT -2 instances
+* In general if data is used very frequently we will use this storage.
+
+2) Infrequant Access(IA)
+* Durability is 99.999999999
+* Availiability is 99.9
+*Concurant FT -2 instances
+* In general if data is not used frequently we will use this storage.
+
+3) Reduce Redundancy Storage (RRS)
+
+* Durability is 99.99
+* Availiability is 99.99
+* Concurant FT -1 instances
+* if storage is reprodusable or easily accessable. we will use this kind of storage.
+
+
+
+S3 Encryption:
+===========
+
+* Server side encryption.
+* Client side encryption.
+
+If we will enable the versioning once, we can't disable. but we can suspend.
+
+
+How to host a static website on s3:
+==========================
+
+1) create bucket
+2) go to bucket properties
+3) enable static webhosting
